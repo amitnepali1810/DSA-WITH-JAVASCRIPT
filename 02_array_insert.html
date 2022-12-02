@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array insert</title>
+</head>
+
+<body>
+    <p>This is <b>data</b>: [8, 30, 10, 50, 20, 44]</p>
+    <input style="width: 300px;" type="text" name="" id="position" placeholder="Enter position?">
+    <input style="width: 300px;" type="text" name="" id="number" placeholder="Enter number">
+    <button onclick="insertElement()">Insert</button>
+
+
+    <script>
+        // insert Element without removing any element in an array 
+        /* 
+        let data = [8, 30, 10, 50, 20, 44];
+        const position = 3;
+        insertEl = 60;
+
+        for (let i=data.length - 1; i >= 0; i--){
+            if(i >= position){
+                data[i+1] = data[i];
+                if(i==position){
+                    data[i] = insertEl;
+                }
+            }
+        }
+
+        console.log(data);
+        */
+
+        insertElement = () => {
+            let data = [8, 30, 10, 50, 20, 44];
+
+            const position = document.getElementById("position").value;
+            const insertEl = document.getElementById("number").value;
+
+            for (let i = data.length - 1; i >= 0; i--) {
+                if (i >= position) {
+                    data[i + 1] = data[i];
+                    if (i == position) {
+                        data[i] = insertEl;
+                    }
+                }
+            }
+
+            console.warn(data);
+            alert(data);
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
